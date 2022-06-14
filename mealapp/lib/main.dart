@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:mealapp/screens/A_login.dart';
 import 'package:mealapp/screens/Login.dart';
+import 'package:mealapp/screens/delivery.dart';
+import 'package:mealapp/screens/foodinfo.dart';
+import 'package:mealapp/screens/newpassword.dart';
+import 'package:mealapp/screens/otpscr.dart';
 import 'package:mealapp/screens/resetpass.dart';
 import 'package:mealapp/screens/signup.dart';
+import 'package:mealapp/screens/tracking.dart';
 import 'package:mealapp/screens/welocme.dart';
 
 void main(List<String> args) {
@@ -17,12 +22,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          body:
-              // Welcome(),
-              // A_Login()
-              // Login()
-              // SignUp()
-              ResetPass()),
+        body:
+            // Welcome(),
+            // A_Login()
+            // Login()
+            // SignUp()
+            // ResetPass()
+            // OtpScr(),
+            // NewPass(),
+            // FoodInfo(),
+            // Delivery(),
+            Tracking(),
+      ),
     );
   }
 }
