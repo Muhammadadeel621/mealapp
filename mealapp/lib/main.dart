@@ -24,15 +24,15 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body:
             // Welcome(),
-            // A_Login()
-            // Login()
-            // SignUp()
-            // ResetPass()
-            // OtpScr(),
-            // NewPass(),
-            // FoodInfo(),
-            // Delivery(),
-            Tracking(),
+            A_login(),
+        // Login(),
+        // SignUp(),
+        // ResetPass(),
+        // OtpScr(),
+        // NewPass(),
+        // FoodInfo(),
+        // Delivery(),
+        // Tracking(),
       ),
     );
   }

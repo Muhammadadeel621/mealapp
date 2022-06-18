@@ -1,7 +1,10 @@
 import 'dart:ffi';
+import 'dart:html';
 // import 'package:getwidget/getwidget.dart';
 
 import 'package:flutter/material.dart';
+import 'package:mealapp/constants/textfield.dart';
+import 'package:mealapp/screens/resetpass.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -46,9 +49,7 @@ class Login extends StatelessWidget {
                     "your email"),
               ),
             ),
-            SizedBox(
-              height: 25,
-            ),
+            gap1(),
             Container(
               decoration: BoxDecoration(
                   color: Color(0xffF2F2F2),
@@ -64,37 +65,23 @@ class Login extends StatelessWidget {
                     "password"),
               ),
             ),
-            SizedBox(
-              height: 25,
-            ),
-            Container(
-              decoration: BoxDecoration(
-                  color: Color(0xffFC6011),
-                  borderRadius: BorderRadius.circular(50),
-                  border: Border.all(color: Color(0xff707070))),
-              margin: EdgeInsets.only(left: 30, right: 30),
-              height: 56,
-              width: 307,
-              child: Center(
+            gap1(),
+            next("login"),
+            gap1(),
+            InkWell(
+              onTap: () {
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => ResetPass()));
+              },
+              child: Container(
+                margin: EdgeInsets.only(left: 120),
                 child: Text(
-                    style: TextStyle(
-                        color: Color(0xffFFFFFF),
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold),
-                    "login"),
-              ),
-            ),
-            SizedBox(
-              height: 25,
-            ),
-            Container(
-              margin: EdgeInsets.only(left: 120),
-              child: Text(
-                "Forgot your password?",
-                style: TextStyle(
-                    color: Color(0xff7C7D7E),
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold),
+                  "Forgot your password?",
+                  style: TextStyle(
+                      color: Color(0xff7C7D7E),
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold),
+                ),
               ),
             ),
             SizedBox(
@@ -110,9 +97,7 @@ class Login extends StatelessWidget {
                     fontWeight: FontWeight.bold),
               ),
             ),
-            SizedBox(
-              height: 25,
-            ),
+            gap1(),
             Container(
               decoration: BoxDecoration(
                   color: Color(0xff367FC0),
@@ -131,9 +116,7 @@ class Login extends StatelessWidget {
                     "Login with Facebook"),
               ),
             ),
-            SizedBox(
-              height: 25,
-            ),
+            gap1(),
             Container(
               decoration: BoxDecoration(
                   color: Color(0xffDD4B39),

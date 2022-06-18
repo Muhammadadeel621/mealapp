@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mealapp/constants/textfield.dart';
 
 class FoodInfo extends StatelessWidget {
   const FoodInfo({Key? key}) : super(key: key);
@@ -47,26 +48,9 @@ class FoodInfo extends StatelessWidget {
                 style: TextStyle(color: Color(0xff7C7D7E), fontSize: 16)),
           ),
 
-          SizedBox(
-            height: 30,
-          ),
-          Container(
-            decoration: BoxDecoration(
-                color: Color(0xffFC6011),
-                borderRadius: BorderRadius.circular(50),
-                border: Border.all(color: Color(0xff707070))),
-            margin: EdgeInsets.only(left: 40, right: 40),
-            height: 56,
-            width: 307,
-            child: Center(
-              child: Text(
-                  style: TextStyle(
-                      color: Color(0xffB6B7B7),
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold),
-                  "Next"),
-            ),
-          ),
+          gap(),
+
+          next("Next"),
         ],
       ),
     );

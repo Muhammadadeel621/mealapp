@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../constants/textfield.dart';
+
 class SignUp extends StatelessWidget {
   const SignUp({Key? key}) : super(key: key);
 
@@ -27,134 +29,20 @@ class SignUp extends StatelessWidget {
         SizedBox(
           height: 36,
         ),
-        Container(
-          decoration: BoxDecoration(
-              color: Color(0xffF2F2F2),
-              borderRadius: BorderRadius.circular(50),
-              border: Border.all(color: Color(0xff707070))),
-          margin: EdgeInsets.only(left: 40, right: 40),
-          height: 56,
-          width: 307,
-          child: Padding(
-            padding: const EdgeInsets.only(left: 35, top: 15),
-            child: Text(
-                style: TextStyle(color: Color(0xffB6B7B7), fontSize: 16),
-                "name"),
-          ),
-        ),
-        SizedBox(
-          height: 30,
-        ),
-        Container(
-          decoration: BoxDecoration(
-              color: Color(0xffF2F2F2),
-              borderRadius: BorderRadius.circular(50),
-              border: Border.all(color: Color(0xff707070))),
-          margin: EdgeInsets.only(left: 40, right: 40),
-          height: 56,
-          width: 307,
-          child: Padding(
-            padding: const EdgeInsets.only(left: 35, top: 15),
-            child: Text(
-                style: TextStyle(color: Color(0xffB6B7B7), fontSize: 16),
-                "email"),
-          ),
-        ),
-        SizedBox(
-          height: 30,
-        ),
-        Container(
-          decoration: BoxDecoration(
-              color: Color(0xffF2F2F2),
-              borderRadius: BorderRadius.circular(50),
-              border: Border.all(color: Color(0xff707070))),
-          margin: EdgeInsets.only(left: 40, right: 40),
-          height: 56,
-          width: 307,
-          child: Padding(
-            padding: const EdgeInsets.only(left: 35, top: 15),
-            child: Text(
-                style: TextStyle(color: Color(0xffB6B7B7), fontSize: 16),
-                "mobile no."),
-          ),
-        ),
-        SizedBox(
-          height: 30,
-        ),
-        Container(
-          decoration: BoxDecoration(
-              color: Color(0xffF2F2F2),
-              borderRadius: BorderRadius.circular(50),
-              border: Border.all(color: Color(0xff707070))),
-          margin: EdgeInsets.only(left: 40, right: 40),
-          height: 56,
-          width: 307,
-          child: Padding(
-            padding: const EdgeInsets.only(left: 35, top: 15),
-            child: Text(
-                style: TextStyle(color: Color(0xffB6B7B7), fontSize: 16),
-                "address"),
-          ),
-        ),
-        SizedBox(
-          height: 30,
-        ),
-        Container(
-          decoration: BoxDecoration(
-              color: Color(0xffF2F2F2),
-              borderRadius: BorderRadius.circular(50),
-              border: Border.all(color: Color(0xff707070))),
-          margin: EdgeInsets.only(left: 40, right: 40),
-          height: 56,
-          width: 307,
-          child: Padding(
-            padding: const EdgeInsets.only(left: 35, top: 15),
-            child: Text(
-                style: TextStyle(color: Color(0xffB6B7B7), fontSize: 16),
-                "password"),
-          ),
-        ),
-        SizedBox(
-          height: 30,
-        ),
-        Container(
-          decoration: BoxDecoration(
-              color: Color(0xffF2F2F2),
-              borderRadius: BorderRadius.circular(50),
-              border: Border.all(color: Color(0xff707070))),
-          margin: EdgeInsets.only(left: 40, right: 40),
-          height: 56,
-          width: 307,
-          child: Padding(
-            padding: const EdgeInsets.only(left: 35, top: 15),
-            child: Text(
-                style: TextStyle(color: Color(0xffB6B7B7), fontSize: 16),
-                "confirm password"),
-          ),
-        ),
-        SizedBox(
-          height: 30,
-        ),
-        Container(
-          decoration: BoxDecoration(
-              color: Color(0xffFC6011),
-              borderRadius: BorderRadius.circular(50),
-              border: Border.all(color: Color(0xff707070))),
-          margin: EdgeInsets.only(left: 40, right: 40),
-          height: 56,
-          width: 307,
-          child: Center(
-            child: Text(
-                style: TextStyle(
-                    color: Color(0xffB6B7B7),
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold),
-                "Sign Up"),
-          ),
-        ),
-        SizedBox(
-          height: 15,
-        ),
+        fieldtextwidget("Name"),
+        gap(),
+        fieldtextwidget("Email"),
+        gap(),
+        fieldnumbwidget("Mobile no."),
+        gap(),
+        fieldtextwidget("address"),
+        gap(),
+        fieldpasswidget("password"),
+        gap(),
+        fieldpasswidget("Confirm Passsword"),
+        gap(),
+        next("Sign Up"),
+        gap2(),
         Container(
             height: 19,
             width: 200,

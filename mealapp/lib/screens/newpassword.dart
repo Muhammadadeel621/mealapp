@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mealapp/constants/textfield.dart';
 
 class NewPass extends StatelessWidget {
   const NewPass({Key? key}) : super(key: key);
@@ -62,26 +63,8 @@ class NewPass extends StatelessWidget {
                   "Confirm Password"),
             ),
           ),
-          SizedBox(
-            height: 30,
-          ),
-          Container(
-            decoration: BoxDecoration(
-                color: Color(0xffFC6011),
-                borderRadius: BorderRadius.circular(50),
-                border: Border.all(color: Color(0xff707070))),
-            margin: EdgeInsets.only(left: 40, right: 40),
-            height: 56,
-            width: 307,
-            child: Center(
-              child: Text(
-                  style: TextStyle(
-                      color: Color(0xffB6B7B7),
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold),
-                  "Next"),
-            ),
-          ),
+          gap(),
+          next("Next"),
         ],
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mealapp/constants/textfield.dart';
 
 class ResetPass extends StatelessWidget {
   const ResetPass({Key? key}) : super(key: key);
@@ -16,7 +17,7 @@ class ResetPass extends StatelessWidget {
           child: Text("Reset Password",
               style: TextStyle(color: Color(0xff4A4B4D), fontSize: 30)),
         ),
-        SizedBox(height: 30),
+        gap(),
         Container(
           height: 40,
           width: 244,
@@ -43,26 +44,8 @@ class ResetPass extends StatelessWidget {
                 "email"),
           ),
         ),
-        SizedBox(
-          height: 30,
-        ),
-        Container(
-          decoration: BoxDecoration(
-              color: Color(0xffFC6011),
-              borderRadius: BorderRadius.circular(50),
-              border: Border.all(color: Color(0xff707070))),
-          margin: EdgeInsets.only(left: 40, right: 40),
-          height: 56,
-          width: 307,
-          child: Center(
-            child: Text(
-                style: TextStyle(
-                    color: Color(0xffB6B7B7),
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold),
-                "Send"),
-          ),
-        ),
+        gap(),
+        next("Send"),
       ]),
     );
   }
