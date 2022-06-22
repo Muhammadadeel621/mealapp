@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mealapp/screens/A_login.dart';
 import 'package:mealapp/screens/Login.dart';
 import 'package:mealapp/screens/delivery.dart';
 import 'package:mealapp/screens/foodinfo.dart';
+import 'package:mealapp/screens/menubar.dart';
 import 'package:mealapp/screens/newpassword.dart';
 import 'package:mealapp/screens/otpscr.dart';
 import 'package:mealapp/screens/resetpass.dart';
@@ -24,15 +24,16 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body:
             // Welcome(),
-            A_login(),
-        // Login(),
-        // SignUp(),
-        // ResetPass(),
-        // OtpScr(),
-        // NewPass(),
-        // FoodInfo(),
-        // Delivery(),
-        // Tracking(),
+            // A_login(),
+            // Login(),
+            // SignUp(),
+            // ResetPass(),
+            // OtpScr(),
+            // NewPass(),
+            // FoodInfo(),
+            // Delivery(),
+            // Tracking(),
+            Menu(),
       ),
     );
   }

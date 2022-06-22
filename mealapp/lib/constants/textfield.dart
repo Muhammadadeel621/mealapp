@@ -19,24 +19,6 @@ textfieldWidget(String name) {
   );
 }
 
-Widget gap() {
-  return SizedBox(
-    height: 30,
-  );
-}
-
-Widget gap2() {
-  return SizedBox(
-    height: 15,
-  );
-}
-
-gap1() {
-  return SizedBox(
-    height: 25,
-  );
-}
-
 fieldtextwidget(String text) {
   return Container(
     decoration: BoxDecoration(
@@ -49,7 +31,6 @@ fieldtextwidget(String text) {
     child: Padding(
       padding: const EdgeInsets.only(left: 30),
       child: TextField(
-        maxLength: 25,
         decoration: InputDecoration(
             border: InputBorder.none,
             hintText: text,
@@ -72,7 +53,6 @@ fieldnumbwidget(String text) {
     child: Padding(
       padding: const EdgeInsets.only(left: 25, top: 20),
       child: TextField(
-        maxLength: 11,
         decoration: InputDecoration(
             border: InputBorder.none,
             hintText: text,
@@ -95,7 +75,6 @@ fieldpasswidget(String text) {
     child: Padding(
       padding: const EdgeInsets.only(left: 30),
       child: TextField(
-        maxLength: 15,
         decoration: InputDecoration(
             border: InputBorder.none,
             hintText: text,

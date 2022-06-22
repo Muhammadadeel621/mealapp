@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mealapp/constants/sizedbox.dart';
 import 'package:mealapp/constants/textfield.dart';
+import 'package:mealapp/screens/Login.dart';
 
 class NewPass extends StatelessWidget {
   const NewPass({Key? key}) : super(key: key);
@@ -18,7 +20,7 @@ class NewPass extends StatelessWidget {
             child: Text("New Password",
                 style: TextStyle(color: Color(0xff4A4B4D), fontSize: 30)),
           ),
-          SizedBox(height: 15),
+          spacer(15, 0),
           Container(
             height: 39,
             width: 244,
@@ -27,9 +29,7 @@ class NewPass extends StatelessWidget {
                 "    Please enter your email to receive a \n link to  create a new password via email",
                 style: TextStyle(color: Color(0xff7C7D7E), fontSize: 16)),
           ),
-          SizedBox(
-            height: 30,
-          ),
+          spacer(30, 0),
           Container(
             decoration: BoxDecoration(
                 color: Color(0xffF2F2F2),
@@ -45,9 +45,7 @@ class NewPass extends StatelessWidget {
                   "New password"),
             ),
           ),
-          SizedBox(
-            height: 30,
-          ),
+          spacer(30, 0),
           Container(
             decoration: BoxDecoration(
                 color: Color(0xffF2F2F2),
@@ -63,8 +61,14 @@ class NewPass extends StatelessWidget {
                   "Confirm Password"),
             ),
           ),
-          gap(),
-          next("Next"),
+          spacer(30, 0),
+          InkWell(
+            onTap: () {
+              Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) => const Login()));
+            },
+            child: next("Next"),
+          ),
         ],
       ),
     );

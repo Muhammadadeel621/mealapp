@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mealapp/screens/A_login.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({Key? key}) : super(key: key);
@@ -9,7 +10,16 @@ class Welcome extends StatelessWidget {
       body: Stack(children: [
         Image.asset('assets/images/01.png'),
         Positioned(
-            top: 280, left: 100, child: Image.asset('assets/images/Logo.png'))
+          top: 330,
+          left: 100,
+          child: InkWell(
+            onTap: () {
+              Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: ((context) => const A_login())));
+            },
+            child: Image.asset('assets/images/Logo.png'),
+          ),
+        ),
       ]),
     );
   }

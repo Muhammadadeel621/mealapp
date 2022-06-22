@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mealapp/constants/sizedbox.dart';
+import 'package:mealapp/screens/Login.dart';
 
 import '../constants/textfield.dart';
 
@@ -11,14 +13,14 @@ class SignUp extends StatelessWidget {
       backgroundColor: Color(0xffFFFFFF),
       body: ListView(children: [
         Container(
-          margin: EdgeInsets.only(left: 160, top: 30),
+          margin: EdgeInsets.only(left: 160, top: 10),
           width: 74,
           height: 40,
           color: Colors.white,
           child: Text("Sign Up",
               style: TextStyle(color: Color(0xff4A4B4D), fontSize: 30)),
         ),
-        SizedBox(height: 15),
+        spacer(15, 0),
         Container(
           height: 19,
           width: 168,
@@ -26,23 +28,27 @@ class SignUp extends StatelessWidget {
           child: Text("Add your details to sign up",
               style: TextStyle(color: Color(0xff7C7D7E), fontSize: 16)),
         ),
-        SizedBox(
-          height: 36,
-        ),
+        spacer(36, 0),
         fieldtextwidget("Name"),
-        gap(),
+        spacer(30, 0),
         fieldtextwidget("Email"),
-        gap(),
+        spacer(30, 0),
         fieldnumbwidget("Mobile no."),
-        gap(),
+        spacer(30, 0),
         fieldtextwidget("address"),
-        gap(),
+        spacer(30, 0),
         fieldpasswidget("password"),
-        gap(),
+        spacer(30, 0),
         fieldpasswidget("Confirm Passsword"),
-        gap(),
-        next("Sign Up"),
-        gap2(),
+        spacer(30, 0),
+        InkWell(
+          onTap: () {
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) => const Login()));
+          },
+          child: next("Sign Up"),
+        ),
+        spacer(15, 0),
         Container(
             height: 19,
             width: 200,

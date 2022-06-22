@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mealapp/constants/sizedbox.dart';
 import 'package:mealapp/constants/textfield.dart';
+import 'package:mealapp/screens/otpscr.dart';
 
 class ResetPass extends StatelessWidget {
   const ResetPass({Key? key}) : super(key: key);
@@ -17,7 +19,7 @@ class ResetPass extends StatelessWidget {
           child: Text("Reset Password",
               style: TextStyle(color: Color(0xff4A4B4D), fontSize: 30)),
         ),
-        gap(),
+        spacer(30, 0),
         Container(
           height: 40,
           width: 244,
@@ -26,9 +28,7 @@ class ResetPass extends StatelessWidget {
               "   Please enter your email to receive a \n link to  create a new password via email",
               style: TextStyle(color: Color(0xff7C7D7E), fontSize: 16)),
         ),
-        SizedBox(
-          height: 50,
-        ),
+        spacer(50, 0),
         Container(
           decoration: BoxDecoration(
               color: Color(0xffF2F2F2),
@@ -44,8 +44,14 @@ class ResetPass extends StatelessWidget {
                 "email"),
           ),
         ),
-        gap(),
-        next("Send"),
+        spacer(30, 0),
+        InkWell(
+          onTap: () {
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) => const OtpScr()));
+          },
+          child: next("Send"),
+        ),
       ]),
     );
   }
