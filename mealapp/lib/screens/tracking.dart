@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mealapp/constants/sizedbox.dart';
 import 'package:mealapp/constants/textfield.dart';
-import 'package:mealapp/screens/menu.dart';
+import 'package:mealapp/screens/Menu.dart';
 
 class Tracking extends StatelessWidget {
   const Tracking({Key? key}) : super(key: key);
@@ -17,22 +17,19 @@ class Tracking extends StatelessWidget {
               height: 313.26,
               width: 210.61,
               child: Image.asset('assets/images/livetracking.png')),
-        spacer(6, 0),
-
+          spacer(6, 0),
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
             CircleAvatar(
               backgroundColor: Colors.grey,
               // BoxDecoration(border: Border.all(color: Color(0xff707070))),
               radius: 5,
             ),
-        spacer(6, 0),
-
+            spacer(6, 0),
             CircleAvatar(
               backgroundColor: Colors.grey,
               radius: 5,
             ),
-        spacer(6, 0),
-
+            spacer(6, 0),
             CircleAvatar(
               backgroundColor: Color(0xffFC6011),
               radius: 5,
@@ -48,8 +45,7 @@ class Tracking extends StatelessWidget {
                   style: TextStyle(color: Color(0xff4A4B4D), fontSize: 28)),
             ),
           ),
-          S        spacer(25, 0),
-
+          spacer(25, 0),
           Container(
             height: 58,
             width: 271,
@@ -58,13 +54,12 @@ class Tracking extends StatelessWidget {
                 "      Real time tracking of your food on the app \n                   once you placed the order",
                 style: TextStyle(color: Color(0xff7C7D7E), fontSize: 16)),
           ),
-        spacer(30, 0),
-
+          spacer(30, 0),
           InkWell(
-            onTap: () {
-              Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) => const Menu()));
-            },
+            // onTap: () {
+            //   Navigator.pushReplacement(context,
+            //       MaterialPageRoute(builder: (context) => const Menu()));
+            // },
             child: next("Next"),
           ),
         ],

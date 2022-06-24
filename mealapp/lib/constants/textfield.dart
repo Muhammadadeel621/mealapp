@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 textfieldWidget(String name) {
   return Container(
     decoration: BoxDecoration(
-        color: Color(0xffF2F2F2),
+        color: const Color(0xffF2F2F2),
         borderRadius: BorderRadius.circular(50),
         border: Border.all(color: Color(0xff707070))),
     margin: EdgeInsets.only(left: 40, right: 40),

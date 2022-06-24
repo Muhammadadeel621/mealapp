@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mealapp/screens/Login.dart';
+import 'package:mealapp/screens/Menu.dart';
 import 'package:mealapp/screens/delivery.dart';
 import 'package:mealapp/screens/foodinfo.dart';
-import 'package:mealapp/screens/menubar.dart';
+import 'package:mealapp/screens/items.dart';
 import 'package:mealapp/screens/newpassword.dart';
 import 'package:mealapp/screens/otpscr.dart';
 import 'package:mealapp/screens/resetpass.dart';
@@ -33,7 +34,8 @@ class MyApp extends StatelessWidget {
             // FoodInfo(),
             // Delivery(),
             // Tracking(),
-            Menu(),
+            // Menu(),
+            Items(),
       ),
     );
   }

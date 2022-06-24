@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mealapp/constants/colors.dart';
+import 'package:mealapp/constants/textwidget.dart';
 import 'package:mealapp/screens/A_login.dart';
 
 class Welcome extends StatelessWidget {
