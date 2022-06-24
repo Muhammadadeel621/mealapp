@@ -3,6 +3,7 @@ import 'package:mealapp/constants/colors.dart';
 import 'package:mealapp/constants/searchbarWidget.dart';
 import 'package:mealapp/constants/sizedbox.dart';
 import 'package:mealapp/constants/textwidget.dart';
+import 'package:mealapp/constants/tile.dart';
 
 class Items extends StatelessWidget {
   const Items({Key? key}) : super(key: key);
@@ -10,42 +11,66 @@ class Items extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color(Appcolorconst.white),
-        elevation: 0,
-        automaticallyImplyLeading: false,
-        title: TextWidget("Menu", 24, Appcolorconst.headingclor, ""),
-        actions: [
-          Image.asset('assets/images/appbar1.png'),
-        ],
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          // mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
+        appBar: AppBar(
+          backgroundColor: Color(Appcolorconst.white),
+          title: TextWidget("Menu", 22, Appcolorconst.headingclor, ""),
+          actions: [Image.asset('assets/images/appbar1.png')],
+        ),
+        body: Column(
           children: [
             spacer(20, 0),
             Searchbar(),
-            spacer(10, 0),
-            Image.asset('assets/images/item1.png'),
-            ListTile(
-              leading: CircleAvatar(
-                child: Image.asset('assets/images/food.png'),
-                radius: 50,
-              ),
-              title: TextWidget("Food", 22, Appcolorconst.headingclor, ""),
-              trailing: Container(
-                height: 20,
-                width: 20,
-                child: Image.asset('assets/images/itme2.png'),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50),
+            spacer(20, 0),
+            Row(
+              children: [
+                Container(
+                  // width: MediaQuery.of(context).size.width * 0.097,
+                  // height: MediaQuery.of(context).size.height * 0.485,
+                  height: 485,
+                  width: 97,
+                  child: Image.asset('assets/images/item1.png'),
                 ),
-              ),
-            )
+                // Container(
+                //   height: 90,
+                //   width: 280,
+                //   child: ListTile(
+                //       leading: CircleAvatar(
+                //         radius: 50,
+                //         backgroundImage:
+                //             AssetImage('assets/images/item_a.png'),
+                //       ),
+                //       title:
+                //           TextWidget("Foods", 18, Appcolorconst.txtcolor, ""),
+                //       subtitle: TextWidget(
+                //           "120 Items", 11, Appcolorconst.D_color, ""),
+                //       trailing: Image.asset('assets/images/item2.png')),
+                // ),
+                tile(
+                    50,
+                    'assets/images/item_a.png',
+                    "Food",
+                    18,
+                    Appcolorconst.headingclor,
+                    "120 Items",
+                    11,
+                    Appcolorconst.D_color,
+                    'assets/images/item2.png'),
+                SizedBox(
+                  height: 30,
+                ),
+                tile(
+                    50,
+                    'assets/images/item_a.png',
+                    "Food",
+                    18,
+                    Appcolorconst.headingclor,
+                    "120 Items",
+                    11,
+                    Appcolorconst.D_color,
+                    'assets/images/item2.png')
+              ],
+            ),
           ],
-        ),
-      ),
-    );
+        ));
   }
 }
